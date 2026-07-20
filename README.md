@@ -1,5 +1,3 @@
-# effective-mobile-devops
-
 Тестовое задание: Python backend за nginx reverse proxy в Docker.
 
 ## Как запустить
