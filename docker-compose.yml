@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    container_name: em_backend
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  nginx:
+    build: ./nginx
+    container_name: em_nginx
+    ports:
+      - "80:80"
+    networks:
+      - internal
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+networks:
+  internal:
