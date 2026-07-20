@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/PlayerJr/Stackbridge_Test.git
-cd effective_mobile_test
+cd Stackbridge_Test
 docker compose up -d
 ```
 
