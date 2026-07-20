@@ -3,7 +3,7 @@
 ## Как запустить
 
 ```
-git clone https://github.com/PlayerJr/effective_mobile_test.git
+git clone [https://github.com/PlayerJr/Stackbridge_Test].git
 cd effective_mobile_test
 docker compose up -d
 ```
